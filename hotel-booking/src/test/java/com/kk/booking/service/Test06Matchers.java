@@ -48,7 +48,7 @@ public class Test06Matchers {
 //		when(this.paymentServiceMock.pay(any(), anyDouble())).thenThrow(BusinessException.class);
 		when(this.paymentServiceMock.pay(any(), eq(400.0))).thenThrow(BusinessException.class);
 		
-		// then
+		// when
 		Executable executable = () -> bookingService.makeBooking(request);
 		
 		//then

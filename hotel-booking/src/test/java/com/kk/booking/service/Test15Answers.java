@@ -22,6 +22,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 /**
  * 1. Static metotlar icin behavioru da answer yardimiyla ayarlayabilmekteyiz.
  * 2. Bu ornekte de oldugu gibi ilgili metodun ilk parametresini alip bunu 0.8 ile return eder bir mock yaratabildik
+ *  Yani sabit degil de dinamik bir output setlenebilmektedir
  * @author korayk
  */
 @ExtendWith(MockitoExtension.class)

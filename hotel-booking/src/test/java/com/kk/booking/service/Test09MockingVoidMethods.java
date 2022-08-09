@@ -43,7 +43,7 @@ public class Test09MockingVoidMethods {
 		BookingRequest request = new BookingRequest("user12", LocalDate.of(2022, 1, 1), LocalDate.of(2022, 1, 3), 2, false);
 		doThrow(BusinessException.class).when(mailSenderMock).sendBookingConfirmation(any());
 			
-		// then
+		// when
 		Executable executable = () -> bookingService.makeBooking(request);
 		
 		//then

@@ -5,7 +5,6 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 import java.util.Arrays;
-import java.util.List;
 
 import com.kk.booking.dao.BookingDAO;
 import com.kk.booking.model.Room;
@@ -46,7 +45,7 @@ public class Test03CustomReturnValues {
 		when(roomServiceMock.getAvailableRooms())
 			.thenReturn(Arrays.asList(new Room("1", 5)));
 		
-		// then
+		// when
 		int result = bookingService.getAvailablePlaceCount();
 		
 		//then
@@ -56,17 +55,16 @@ public class Test03CustomReturnValues {
 	@Test
 	void should_CountAvailablePlaces_When_MultipleRoomsAvailable() {
 		// given
-		List<Room> roomList = Arrays.asList(
-			new Room("1", 3),
-			new Room("1", 2),
-			new Room("1", 1),
-			new Room("1", 4));
-		
 		when(roomServiceMock.getAvailableRooms())
-			.thenReturn(roomList);
+			.thenReturn(Arrays.asList(
+					new Room("1", 3),
+					new Room("1", 2),
+					new Room("1", 1),
+					new Room("1", 4)));
 		
 		int total = 10;
-		// then
+		
+		// when
 		int result = bookingService.getAvailablePlaceCount();
 		
 		//then

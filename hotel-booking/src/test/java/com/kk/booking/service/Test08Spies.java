@@ -33,6 +33,7 @@ public class Test08Spies {
 		bookingDaoMock = spy(BookingDAO.class);
 		mailSenderMock = mock(MailSender.class);
 		
+		System.out.println(bookingDaoMock.save(new BookingRequest(null, null, null, 0, false)));
 		bookingService = new BookingService(paymentServiceMock, roomServiceMock, bookingDaoMock, mailSenderMock);
 	}
 	

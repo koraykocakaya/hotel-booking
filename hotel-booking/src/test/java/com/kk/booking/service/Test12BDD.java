@@ -24,7 +24,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 /**
  * 1. Aslinda bizim kullandigimiz given, when, then yapisi Behavioral Driven Development (BDD) isaret etmektedir
  * 2. Ancak metot adlari given'da when gibi kafa karistirici olabilmektedir, bunun yerine BDDMockito kullandigimizda
- * 3. given, willReturn ve then gibi metotlari kullanarak metotlari BDD'ye uygun sekilde kullanabilmemzi saglanmaktadir 
+ *  given, willReturn ve then gibi metotlari kullanarak metotlari BDD'ye uygun sekilde kullanabilmemzi saglanmaktadir 
  * @author korayk
  */
 @ExtendWith(MockitoExtension.class)
@@ -56,7 +56,7 @@ public class Test12BDD {
 		given(roomServiceMock.getAvailableRooms())
 			.willReturn(Arrays.asList(new Room("1", 5)));
 		
-		// then
+		// when
 		int result = bookingService.getAvailablePlaceCount();
 		
 		//then

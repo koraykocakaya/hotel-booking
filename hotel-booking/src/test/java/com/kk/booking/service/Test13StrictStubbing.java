@@ -2,7 +2,7 @@ package com.kk.booking.service;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyDouble;
-import static org.mockito.Mockito.lenient;
+import static org.mockito.Mockito.*;
 
 import java.time.LocalDate;
 

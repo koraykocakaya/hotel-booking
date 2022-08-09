@@ -17,7 +17,7 @@ import org.junit.jupiter.api.Test;
  * 2. Bu sekilde diger metotlardaki gibi test edilebilmektedir
  * 3. Private metotlar mocklanamaz ve mocklanmamalidir da, bunun yerine onu kullanan public metotlarin mocklanmasi yeterli olacaktir
  */
-public class Test16FinaMethods {
+public class Test16FinalMethods {
 	
 	private BookingService bookingService;
 	private PaymentService paymentServiceMock; 
@@ -44,7 +44,7 @@ public class Test16FinaMethods {
 		when(roomServiceMock.getAvailableRooms())
 			.thenReturn(Arrays.asList(new Room("1", 5)));
 		
-		// then
+		// when
 		int result = bookingService.getAvailablePlaceCount();
 		
 		//then

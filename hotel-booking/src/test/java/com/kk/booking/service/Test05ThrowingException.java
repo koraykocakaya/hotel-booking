@@ -15,7 +15,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
 
 /**
- * 1. 
+ * 1. when, thenReturn yapisi gibi thenThrow ile mock hata firlatacak sekilde kullanilabilmektedir
  * @author korayk
  */
 public class Test05ThrowingException {
@@ -44,7 +44,7 @@ public class Test05ThrowingException {
 		when(roomServiceMock.findAvailableRoomId(request))
 			.thenThrow(BusinessException.class);
 		
-		// then
+		// when
 		Executable executable = () -> bookingService.makeBooking(request);
 		
 		//then
